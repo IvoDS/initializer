@@ -8,3 +8,4 @@
 /initializer-be/database.sqlite
 /initializer-be/node_modules/
 /initializer-be/logs/
+/initializer-fe/.env

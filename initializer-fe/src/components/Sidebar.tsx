@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Cpu, Network, LogTerminal, LogOut } from 'lucide-react';
+import { LayoutDashboard, Cpu, Network, Terminal, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
@@ -16,7 +16,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { icon: <LayoutDashboard size={20} />, label: 'Dashboard', path: '/' },
     { icon: <Network size={20} />, label: 'Network Discovery', path: '/network' },
     { icon: <Cpu size={20} />, label: 'USB Flashing', path: '/flashing' },
-    { icon: <LogTerminal size={20} />, label: 'System Logs', path: '/logs' },
+    { icon: <Terminal size={20} />, label: 'System Logs', path: '/logs' },
   ];
 
   return (

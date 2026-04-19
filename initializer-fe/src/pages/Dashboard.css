@@ -1,0 +1,137 @@
+.ids-page-header {
+  margin-bottom: 32px;
+}
+
+.ids-page-header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--ids-text);
+  margin-bottom: 8px;
+}
+
+.ids-page-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.ids-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.ids-stat-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: var(--ids-border);
+  border-radius: var(--ids-border-radius);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+.ids-stat-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ids-stat-icon {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ids-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ids-stat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ids-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ids-text);
+  font-family: var(--ids-font-mono);
+}
+
+.ids-dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.ids-dashboard-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: var(--ids-border);
+  border-radius: var(--ids-border-radius);
+  padding: 32px;
+}
+
+.ids-dashboard-card h2 {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--ids-sapphire);
+}
+
+.ids-welcome-card p {
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+.ids-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ids-activity-item {
+  display: flex;
+  gap: 16px;
+  font-size: 0.875rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ids-activity-time {
+  font-family: var(--ids-font-mono);
+  color: #555;
+  white-space: nowrap;
+}
+
+.ids-activity-text {
+  color: #ccc;
+}
+
+.ids-card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ids-version {
+  font-family: var(--ids-font-mono);
+  font-size: 0.75rem;
+  color: #444;
+}
+
+@media (max-width: 1024px) {
+  .ids-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,7 +1,6 @@
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
-const cors = require('cors');
 const dotenv = require('dotenv');
 const sequelize = require('./config/database');
 const User = require('./models/User');
@@ -11,20 +10,35 @@ const DeviceService = require('./services/deviceService');
 dotenv.config();
 
 const app = express();
+
+// Manual "Nuclear" CORS - Sets headers for EVERY request
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  
+  // Handle Preflight (OPTIONS)
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  next();
+});
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*', // Adjust for production
+    origin: '*',
+    methods: ['GET', 'POST']
   },
 });
 
 const deviceService = new DeviceService(io);
 
-app.use(cors());
 app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/logs', require('./routes/logs'));
 
 // Socket.io connection
 io.on('connection', (socket) => {

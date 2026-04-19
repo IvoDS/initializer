@@ -1,0 +1,120 @@
+.ids-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ids-dark-bg);
+  background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 20px;
+}
+
+.ids-login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(10, 10, 10, 0.8);
+  border: var(--ids-border);
+  border-radius: var(--ids-border-radius);
+  padding: 40px;
+  box-shadow: var(--ids-glow);
+  backdrop-filter: blur(10px);
+}
+
+.ids-login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ids-brand-icon {
+  color: var(--ids-sapphire);
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.ids-login-header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: var(--ids-text);
+  margin-bottom: 8px;
+}
+
+.ids-login-header p {
+  font-size: 0.875rem;
+  color: #666;
+  font-family: var(--ids-font-mono);
+}
+
+.ids-error-alert {
+  background-color: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  padding: 12px;
+  border-radius: var(--ids-border-radius);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+
+.ids-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ids-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ids-input-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.ids-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ids-input-icon {
+  position: absolute;
+  left: 12px;
+  color: #555;
+}
+
+.ids-input-wrapper input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--ids-border-radius);
+  padding: 12px 12px 12px 40px;
+  color: var(--ids-text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.ids-input-wrapper input:focus {
+  outline: none;
+  border-color: var(--ids-sapphire);
+  background-color: rgba(15, 82, 186, 0.05);
+}
+
+.ids-login-submit {
+  width: 100%;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.ids-login-footer {
+  margin-top: 32px;
+  text-align: center;
+  font-family: var(--ids-font-mono);
+  font-size: 0.625rem;
+  color: #444;
+}

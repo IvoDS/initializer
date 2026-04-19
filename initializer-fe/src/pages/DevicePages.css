@@ -1,0 +1,130 @@
+.ids-header-with-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.ids-device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ids-device-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: var(--ids-border);
+  border-radius: var(--ids-border-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ids-device-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ids-device-icon {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ids-sapphire);
+}
+
+.ids-device-info {
+  flex: 1;
+}
+
+.ids-device-info h3 {
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+  color: var(--ids-text);
+}
+
+.ids-device-meta {
+  font-family: var(--ids-font-mono);
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.ids-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ids-badge.is-online, .ids-badge.is-ready {
+  background-color: rgba(80, 200, 120, 0.1);
+  color: var(--ids-emerald);
+  border: 1px solid rgba(80, 200, 120, 0.2);
+}
+
+.ids-device-actions {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ids-progress-container {
+  width: 100%;
+}
+
+.ids-progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-family: var(--ids-font-mono);
+  font-size: 0.75rem;
+}
+
+.ids-progress-msg {
+  color: #888;
+}
+
+.ids-progress-percent {
+  color: var(--ids-emerald);
+  font-weight: bold;
+}
+
+.ids-progress-bar {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ids-progress-fill {
+  height: 100%;
+  background-color: var(--ids-emerald);
+  box-shadow: 0 0 10px var(--ids-emerald);
+  transition: width 0.3s ease;
+}
+
+.ids-success-msg {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ids-emerald);
+  font-family: var(--ids-font-mono);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .ids-header-with-action {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

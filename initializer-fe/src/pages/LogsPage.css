@@ -1,0 +1,89 @@
+.ids-terminal {
+  background-color: #050505;
+  border: var(--ids-border);
+  border-radius: var(--ids-border-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.ids-terminal-header {
+  background-color: #1a1a1a;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ids-terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.ids-terminal-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.ids-terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ids-font-mono);
+  font-size: 0.625rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ids-terminal-content {
+  padding: 20px;
+  height: 500px;
+  overflow-y: auto;
+  font-family: var(--ids-font-mono);
+  font-size: 0.8125rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ids-log-line {
+  display: flex;
+  gap: 20px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.ids-log-number {
+  color: #333;
+  user-select: none;
+}
+
+.ids-log-text {
+  color: #aaa;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.ids-log-empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-style: italic;
+}
+
+/* Scrollbar for terminal */
+.ids-terminal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ids-terminal-content::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+.ids-terminal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--ids-sapphire);
+}
