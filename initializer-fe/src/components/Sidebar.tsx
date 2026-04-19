@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Cpu, Network, Terminal, LogOut, GitHub } from 'lucide-react';
+import { LayoutDashboard, Cpu, Network, Terminal, LogOut, Github } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
