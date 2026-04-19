@@ -1,0 +1,63 @@
+:root {
+  /* Colors */
+  --ids-sapphire: #0f52ba;
+  --ids-emerald: #50c878;
+  --ids-dark-bg: #0a0a0a;
+  --ids-text: #f4f4f4;
+
+  /* Typography */
+  --ids-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --ids-font-mono: 'Fira Code', 'Roboto Mono', monospace;
+
+  /* Components Styling */
+  --ids-border-radius: 8px;
+  --ids-glow: 0 0 15px rgba(15, 82, 186, 0.4);
+  --ids-border: 1px solid rgba(80, 200, 120, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ids-dark-bg);
+  color: var(--ids-text);
+  font-family: var(--ids-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--ids-font-mono);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ids-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ids-sapphire);
+}

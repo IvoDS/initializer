@@ -1,3 +1,10 @@
 /BRAND_GUIDELINES.md
 /GEMINI.md
 /.idea/
+/initializer-be/DECISIONS.md
+/initializer-fe/DECISIONS.md
+/DECISIONS.md
+/initializer-be/.env
+/initializer-be/database.sqlite
+/initializer-be/node_modules/
+/initializer-be/logs/

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "usb-001",
+    "label": "Generic Flash Disk",
+    "path": "/dev/sdb",
+    "capacity": "16GB",
+    "status": "ready"
+  },
+  {
+    "id": "usb-002",
+    "label": "Industrial SD Card Reader",
+    "path": "/dev/sdc",
+    "capacity": "32GB",
+    "status": "ready"
+  }
+]

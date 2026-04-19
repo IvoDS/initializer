@@ -1,0 +1,71 @@
+.ids-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--ids-border-radius);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  gap: 8px;
+}
+
+.ids-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.ids-button--primary {
+  background-color: var(--ids-sapphire);
+  color: white;
+  box-shadow: var(--ids-glow);
+}
+
+.ids-button--primary:hover:not(:disabled) {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
+.ids-button--secondary {
+  background-color: var(--ids-emerald);
+  color: var(--ids-dark-bg);
+}
+
+.ids-button--secondary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.ids-button--outline {
+  background-color: transparent;
+  border: var(--ids-border);
+  color: var(--ids-emerald);
+}
+
+.ids-button--outline:hover:not(:disabled) {
+  background-color: rgba(80, 200, 120, 0.1);
+}
+
+.ids-button--ghost {
+  background-color: transparent;
+  color: var(--ids-text);
+}
+
+.ids-button--ghost:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sizes */
+.ids-button--sm {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.ids-button--md {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.ids-button--lg {
+  padding: 14px 28px;
+  font-size: 1.125rem;
+}

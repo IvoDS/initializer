@@ -1,0 +1,23 @@
+[
+  {
+    "id": "net-001",
+    "hostname": "gateway-service-alpha",
+    "ip": "192.168.1.15",
+    "status": "online",
+    "type": "gateway"
+  },
+  {
+    "id": "net-002",
+    "hostname": "node-sensor-04",
+    "ip": "192.168.1.42",
+    "status": "online",
+    "type": "sensor"
+  },
+  {
+    "id": "net-003",
+    "hostname": "hmi-control-panel",
+    "ip": "192.168.1.100",
+    "status": "online",
+    "type": "hmi"
+  }
+]
