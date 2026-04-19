@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Cpu, Network, Terminal, LogOut } from 'lucide-react';
+import { LayoutDashboard, Cpu, Network, Terminal, LogOut, GitHub } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
@@ -39,6 +39,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <span>{item.label}</span>
             </NavLink>
           ))}
+          
+          <a 
+            href="https://github.com/IvoDS/initializer" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="ids-nav-item"
+            onClick={onClose}
+          >
+            <Github size={20} />
+            <span>GitHub Repo</span>
+          </a>
         </nav>
 
         <div className="ids-sidebar-footer">
