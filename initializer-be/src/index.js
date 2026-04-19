@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const dotenv = require('dotenv');
+const path = require('path');
 const sequelize = require('./config/database');
 const User = require('./models/User');
 const logger = require('./utils/logger');
@@ -36,9 +37,14 @@ const deviceService = new DeviceService(io);
 
 app.use(express.json());
 
-// Routes
+// API Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/logs', require('./routes/logs'));
+
+// Serve Static Frontend Files
+// We assume 'public' folder contains the built 'dist' from the frontend
+const publicPath = path.join(__dirname, '../public');
+app.use(express.static(publicPath));
 
 // Socket.io connection
 io.on('connection', (socket) => {
@@ -67,6 +73,11 @@ io.on('connection', (socket) => {
   });
 });
 
+// SPA Routing fallback: Serve index.html for all remaining requests
+app.use((req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
 const PORT = process.env.PORT || 3001;
 
 const startServer = async () => {
@@ -75,13 +86,16 @@ const startServer = async () => {
     logger.info('Database synced');
 
     // Seed admin user if not exists
-    const adminExists = await User.findOne({ where: { username: process.env.ADMIN_USER } });
+    const adminUser = process.env.ADMIN_USER || 'admin';
+    const adminPass = process.env.ADMIN_PASS || 'admin123';
+
+    const adminExists = await User.findOne({ where: { username: adminUser } });
     if (!adminExists) {
       await User.create({
-        username: process.env.ADMIN_USER,
-        password: process.env.ADMIN_PASS,
+        username: adminUser,
+        password: adminPass,
       });
-      logger.info('Admin user created');
+      logger.info(`Admin user created: ${adminUser}`);
     }
 
     server.listen(PORT, () => {

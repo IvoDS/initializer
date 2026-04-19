@@ -9,3 +9,5 @@
 /initializer-be/node_modules/
 /initializer-be/logs/
 /initializer-fe/.env
+/initializer-be/public/
+/deploy/deploy.env
